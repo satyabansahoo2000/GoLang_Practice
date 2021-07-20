@@ -1,10 +1,25 @@
-# Getting Started with GoLang
+# GO Basics 
+## Functions
+- Made functions `readName`, `convertAge`, `arrayMarks`, `dateAdmission`
+- Return from those function `string`, `time.Time`, `float64`, `(float64, float64)`
+- Calling all functions inside `main` function
 
-## hello-world program
+## Variables
+- Naming variables using different methods
+    - using `:=` 
+        - `<variable> := <value>`
+    - using `var` keyword
+        - `var <variable> <type> := <value>`
 
-1. Create a folder named "folder_name" 
-2. `cd folder_name`
-3. Enable Dependancy tracking by running `go mod init example.com/helloworld`
-4. Code the [helloworld](hello.go)
-5. Run `go mod tidy` to update the dependencies for [rsc.io/quote](https://pkg.go.dev/rsc.io/quote)
-6. To run the code, execute `go run .` which will run the only .go file present inside the folder. 
+## Loops
+- Looping through arrays using `for` loop
+
+## Packages
+- Used different packages
+    - `fmt` : to print outputs
+    - `bufio` : to take inputs from the user
+    - `time` : to import the timeDate
+    - `os` : to handle the operating system functionalities 
+    - `strconv` : to convert the string
+    - `strings` : to provide all functionalities for a string
+    - `math` : to provide all functionalities for a math function
