@@ -1,4 +1,4 @@
-# GO Basics 
+# GO Basics - 1
 ## Functions
 - Made functions `readName`, `convertAge`, `arrayMarks`, `dateAdmission`
 - Return from those function `string`, `time.Time`, `float64`, `(float64, float64)`
@@ -6,10 +6,11 @@
 
 ## Variables
 - Naming variables using different methods
-    - using `:=` 
+    - using `:=` (short variable declaration operator)
         - `<variable> := <value>`
-    - using `var` keyword
-        - `var <variable> <type> := <value>`
+    - using `var` keyword 
+        - type inferred - `var <variable> <type> = <value>`
+        - explicitly typed - `var <variable> <type>`
 
 ## Loops
 - Looping through arrays using `for` loop
