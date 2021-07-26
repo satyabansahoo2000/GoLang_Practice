@@ -8,10 +8,15 @@
 - The `&` operator generates a pointer to its operand.
 - The `*` operator denotes the pointer's underlying value.
 - Also known as *dereferencing* or *indirecting*
+
 ## Structures
+- A collection of fields
 
 ## Methods
 - No OOPS in Go, so `methods` are being used.
 - Method is a function with a receiver as argument.
 
 ## Interface
+- collection of `methods`
+- implemented implicitly
+- used to specify a set of one or more method signatures

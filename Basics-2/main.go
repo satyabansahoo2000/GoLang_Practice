@@ -16,6 +16,11 @@ type Student struct {
 	
 }
 
+// Creating an interface
+type College interface {
+	Student_Name() string
+}
+
 // Function to use method
 // Student_Name -> method
 // s Student -> Receiver
