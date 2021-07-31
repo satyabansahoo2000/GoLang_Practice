@@ -38,4 +38,9 @@ func main() {
 	slice2 = append(slice2, 15, 20)
 	fmt.Println(slice2)
 	fmt.Println(slice1)
+
+	// looping through the elements
+	for index, value := range slice2 {
+		fmt.Println("Index :", index, "Value: ", value)
+	}
 }
