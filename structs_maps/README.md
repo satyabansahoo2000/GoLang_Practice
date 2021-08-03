@@ -1,0 +1,1 @@
+using `struct` and `maps` in one file
