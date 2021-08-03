@@ -35,4 +35,5 @@ func main() {
 	} else {
 		fmt.Println("Key is not present")
 	}
+	fmt.Println(age2)				// map[Sabyasachi:22 Satyaban:22]
 }
