@@ -1,0 +1,19 @@
+# Concurrency
+- allows to run multiple codes simultaneously
+- requires the use of constructs such as threads and locks to perform synchronization and prevent deadlocks
+- goroutines are functions that run concurrently with other functions
+- `Mutex` (mutual excusion lock) 
+    - this will make sure that only one goroutine can access the variable at any one time.
+    - When one Goroutine gains the mutual exclusion lock, other Goroutines need to wait until the lock is released.
+    - available in `sync` package
+    - `Lock()` function locks the goroutines, after that goroutine is fully executed, it is unlocked by `Unlock()` function. 
+- `atomic counters`
+    - routine that allows to perform mathematical operations on variables one thread at a time
+    - useful in synchronization algorithms
+    - `AddInt64()` function automatically adds a value to the specified variable and returns the new value
+- `Wait Groups` 
+    - to know when the goroutine is fully executed
+    - avaiable in `sync` package
+    - `wg.Done()` // decrement 1 from the WaitGroup counter
+    - `wg.Wait()` // blocks until WaitGroup counter is 0
+    - `wg.Add(1)` // add 1 to the WaitGroup counter
