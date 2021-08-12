@@ -3,12 +3,13 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"time"
 )
 
 func sum(nums []int, ch chan int) {
 	sum := 0
-	for _, value := range nums {
-		sum += value
+	for _, v := range nums {
+		sum += v
 	}
 	ch <- sum
 	fmt.Println("Done and Continue")
@@ -27,11 +28,12 @@ func main() {
 	i := 0
 	for i < parts {
 		go sum(s[i*partSize:(i+1)*partSize], ch)
+		i += 1
 	}
 
 	i = 0
 	total := 0
-
+	time.Sleep(1 * time.Second)
 	for i < parts {
 		partialSum := <- ch
 		fmt.Println("Partial Sum: ", partialSum)
