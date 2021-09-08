@@ -40,6 +40,32 @@ func InsertRecord(db *sql.DB, ID string, Details string) {
     }
 }
 
+func EditRecord(db *sql.DB, ID string, Details string) {
+    result, err := db.Exec(
+        "UPDATE Course SET Details=? WHERE ID=?", Details, ID,
+    )
+    if err != nil {
+        fmt.Println(err.Error())
+    } else {
+        if count, err := result.RowsAffected(); err == nil {
+            fmt.Println(count, "row(s) affected!!")
+        }
+    }
+}
+
+func DeleteRecord(db *sql.DB, ID string) {
+    result, err := db.Exec(
+        "DELETE FROM Course WHERE ID=?", ID,
+    )
+    if err != nil {
+        fmt.Println(err.Error())
+    } else {
+        if count, err := result.RowsAffected(); err == nil {
+            fmt.Println(count, "row(s) affected!!!")
+        }
+    }
+}
+
 func main() {
     db, err := sql.Open("postgres","gouser:password@tcp(127.0.0.1:5432)/CoursesDB")
         
@@ -49,7 +75,9 @@ func main() {
     } else {
         fmt.Println("Database object created")
 		InsertRecord(db, "IOS101", "iOS Programming")
-		GetRecords(db)
+		EditRecord(db, "IOS101", "SwiftUI Programming")
+        DeleteRecord(db, "IOS101")
+        GetRecords(db)
     }
 
     // defer the close till after the main function has
